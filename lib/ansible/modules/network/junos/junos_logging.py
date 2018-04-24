@@ -121,6 +121,13 @@ EXAMPLES = """
     - { dest: file, name: test-1,  facility: pfe, level: critical }
     - { dest: file, name: test-2,  facility: kernel, level: emergency }
     state: absent
+   
+- name: Configure host logging
+  junos_logging:
+    dest: host
+    name: 192.168.1.1
+    level: notice
+    facility: any
 """
 
 RETURN = """
